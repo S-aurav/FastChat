@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat App</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="sidebar">
+            <div class="header">
+                <h3>Your Contacts</h3>
+                <button onclick="showAddContact()">+ Add Contact</button>
+            </div>
+            <div id="contactsList"></div>
+        </div>
+        
+        <div class="chat-area">
+            <div class="chat-header">
+                <h3 id="currentContact">Select a contact</h3>
+            </div>
+            <div id="messagesContainer"></div>
+            <div class="message-input">
+                <input type="text" id="messageInput" placeholder="Type a message...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="addContactModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAddContact()">&times;</span>
+            <input type="text" id="contactUsername" placeholder="Enter username">
+            <button onclick="addContact()">Add Contact</button>
+        </div>
+    </div>
+
+    <script src="/static/js/chat.js"></script>
+</body>
+</html>
